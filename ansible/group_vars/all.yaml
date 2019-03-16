@@ -18,3 +18,13 @@ virtualenv_install_method: package
 # windmill-config
 # TODO(pabelanger): Create windmill-config project on git.o.o.
 windmill_config_git_dest: ~/.config/windmill
+
+windmill_users:
+  windmill:
+    comment: Windmill (deployer)
+    key: # NOTE(pabelanger): Insert public SSH key
+    gid: 2000
+    uid: 2000
+
+windmill_root_users:
+  - windmill
