@@ -28,3 +28,9 @@ windmill_users:
 
 windmill_root_users:
   - windmill
+
+# NOTE(pabelanger): We are only adding 19885/tcp here so we can stream ansible
+# logs for testing. In production, you should remove this!
+iptables_public_tcp_ports:
+  - 22
+  - 19885
