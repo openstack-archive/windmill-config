@@ -17,4 +17,5 @@ ansible_pip_name:
   - ara
   - netaddr
 ansible_pip_virtualenv_python: python3
-ansible_pip_virtualenv: /opt/venv/ansible
+ansible_pip_virtualenv: /opt/venv/ansible-untagged
+ansible_pip_virtualenv_symlink: /opt/venv/ansible
