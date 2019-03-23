@@ -28,7 +28,8 @@ nodepool_file_nodepool_launcher_service_config_manage: false
 nodepool_file_nodepool_launcher_service_manage: false
 
 nodepool_pip_virtualenv_python: python3
-nodepool_pip_virtualenv: /opt/venv/nodepool
+nodepool_pip_virtualenv: /opt/venv/nodepool-untagged
+nodepool_pip_virtualenv_symlink: /opt/venv/nodepool
 
 nodepool_service_nodepool_builder_enabled: false
 nodepool_service_nodepool_builder_manage: false
@@ -44,6 +45,6 @@ openstacksdk_user_group: nodepool
 openstacksdk_user_home: /var/lib/nodepool
 
 openstacksdk_pip_virtualenv_python: python3
-openstacksdk_pip_virtualenv: /opt/venv/nodepool
+openstacksdk_pip_virtualenv: /opt/venv/nodepool-untagged
 
 openstacksdk_file_clouds_yaml_src: "{{ windmill_config_git_dest }}/nodepool/clouds.yaml.j2"
