@@ -14,7 +14,7 @@
 ---
 # windmill.diskimage-builder
 diskimage_builder_pip_virtualenv_python: python3
-diskimage_builder_pip_virtualenv: /opt/venv/nodepool
+diskimage_builder_pip_virtualenv: /opt/venv/nodepool-untagged
 
 # windmill.nodepool
 nodepool_file_builder_logging_conf_manage: true
