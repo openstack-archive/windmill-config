@@ -19,7 +19,7 @@ zuul_file_zuul_executor_service_config_manage: true
 zuul_file_zuul_executor_service_config_src: zuul/etc/systemd/system/zuul-executor.service.d/override.conf.j2
 zuul_file_zuul_executor_service_manage: true
 
-zuul_pip_name: zuul[zuul_executor]
+zuul_pip_name: zuul
 
 zuul_service_zuul_executor_enabled: true
 zuul_service_zuul_executor_manage: true
@@ -94,3 +94,23 @@ ssh_key_private_content: |
   -----END RSA PRIVATE KEY-----
 
 ssh_key_private_dest: "{{ ssh_user_home }}/.ssh/nodepool_id_rsa"
+
+zuul_executor_ansible:
+  - ansible_pip_name:
+      - ansible>=2.5,<2.6
+      - ara
+    ansible_pip_virtualenv_python: python3
+    ansible_pip_virtualenv: /opt/venv/ansible-2.5
+    ansible_pip_virtualenv_symlink: /opt/venv/zuul-ansible/2.5
+  - ansible_pip_name:
+      - ansible>=2.6,<2.7
+      - ara
+    ansible_pip_virtualenv_python: python3
+    ansible_pip_virtualenv: /opt/venv/ansible-2.6
+    ansible_pip_virtualenv_symlink: /opt/venv/zuul-ansible/2.6
+  - ansible_pip_name:
+      - ansible>=2.7,<2.8
+      - ara
+    ansible_pip_virtualenv_python: python3
+    ansible_pip_virtualenv: /opt/venv/ansible-2.7
+    ansible_pip_virtualenv_symlink: /opt/venv/zuul-ansible/2.7
