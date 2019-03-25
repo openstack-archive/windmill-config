@@ -19,6 +19,10 @@ zuul_file_zuul_web_service_config_manage: true
 zuul_file_zuul_web_service_config_src: zuul/etc/systemd/system/zuul-web.service.d/override.conf.j2
 zuul_file_zuul_web_service_manage: true
 
+zuul_pip_name:
+  - zuul
+  - pymysql
+
 zuul_service_zuul_web_enabled: true
 zuul_service_zuul_web_manage: true
 zuul_service_zuul_web_state: started
